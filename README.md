@@ -135,7 +135,7 @@ The I-V characteristics graph of a practical SPV cell is given below
 
 
 | Sl | Parameter | Unit |
-| -- | -- | -- |
+|:---:|:---:|:------------:|
 | 1 | Rated Power  | 37.08 W |
 | 2 | Voltage at Maximum power| 16.56 V |
 | 3 | Current at Maximum power | 2.25 A |
@@ -150,7 +150,7 @@ The I-V characteristics graph of a practical SPV cell is given below
 
 
 | Sl | Parameter | Unit |
-| -- | -- | -- |
+|:---:|:----:|:----:|
 | 1 | Rated Power  | 37.08 W |
 | 2 | Voltage at Maximum power| 16.56 V |
 | 3 | Current at Maximum power | 2.25 A |
