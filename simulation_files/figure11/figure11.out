@@ -1,0 +1,184 @@
+
+**** 03/16/15 23:36:19 *********** Evaluation PSpice (Nov 1999) **************
+
+ * F:\2-2\matlab assignment\project\ex\figure11.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Mar 16 23:36:19 2015
+
+
+
+** Analysis setup **
+.DC LIN I_I4 0 210 .1 
+.STMLIB "figure11.stl"
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "figure11.net"
+
+**** INCLUDING figure11.net ****
+* Schematics Netlist *
+
+
+
+R_Rse         $N_0002 $N_0001  .47  
+R_Rsh         0 $N_0002  145.62  
+D_D4         $N_0002 0 D1N4148 
+M_M1         $N_0001 $N_0004 $N_0003 $N_0003 IRF150
+X_U1         $N_0005 $N_0003 $N_0006 $N_0007 $N_0004 uA741
+V_V1         $N_0006 0 10V
+R_Rsense         0 $N_0003  1k  
+V_V3         $N_0005 0 DC 10 
++PULSE 0 32.9 0 
+I_I4         0 $N_0002 DC .06  
+V_V2         0 $N_0007 10V
+
+**** RESUMING figure11.cir ****
+.INC "figure11.als"
+
+
+
+**** INCLUDING figure11.als ****
+* Schematics Aliases *
+
+.ALIASES
+R_Rse           Rse(1=$N_0002 2=$N_0001 )
+R_Rsh           Rsh(1=0 2=$N_0002 )
+D_D4            D4(1=$N_0002 2=0 )
+M_M1            M1(d=$N_0001 g=$N_0004 s=$N_0003 s=$N_0003 )
+X_U1            U1(+=$N_0005 -=$N_0003 V+=$N_0006 V-=$N_0007 OUT=$N_0004 )
+V_V1            V1(+=$N_0006 -=0 )
+R_Rsense          Rsense(1=0 2=$N_0003 )
+V_V3            V3(+=$N_0005 -=0 )
+I_I4            I4(+=0 -=$N_0002 )
+V_V2            V2(+=0 -=$N_0007 )
+.ENDALIASES
+
+
+**** RESUMING figure11.cir ****
+.probe
+
+
+.END
+
+**** 03/16/15 23:36:19 *********** Evaluation PSpice (Nov 1999) **************
+
+ * F:\2-2\matlab assignment\project\ex\figure11.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         X_U1.dx         
+          IS    2.682000E-09  800.000000E-18 
+           N    1.836                        
+         ISR    1.565000E-09                 
+         IKF     .04417                      
+          BV  100                            
+         IBV  100.000000E-06                 
+          RS     .5664          1            
+          TT   11.540000E-09                 
+         CJO    4.000000E-12                 
+          VJ     .5                          
+           M     .3333                       
+
+
+**** 03/16/15 23:36:19 *********** Evaluation PSpice (Nov 1999) **************
+
+ * F:\2-2\matlab assignment\project\ex\figure11.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.qx         
+               NPN             
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 03/16/15 23:36:19 *********** Evaluation PSpice (Nov 1999) **************
+
+ * F:\2-2\matlab assignment\project\ex\figure11.sch
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IRF150          
+               NMOS            
+       LEVEL    3            
+           L    2.000000E-06 
+           W     .3          
+         VTO    2.831        
+          KP   20.530000E-06 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD    1.031000E-03 
+          RS    1.624000E-03 
+          RG   13.89         
+         RDS  444.400000E+03 
+          IS  194.000000E-18 
+          JS    0            
+          PB     .8          
+        PBSW     .8          
+         CBD    3.229000E-09 
+          CJ    0            
+        CJSW    0            
+          TT  288.000000E-09 
+        CGSO    9.027000E-09 
+        CGDO    1.679000E-09 
+        CGBO    0            
+         TOX  100.000000E-09 
+          XJ    0            
+       UCRIT   10.000000E+03 
+       DELTA    0            
+         ETA    0            
+       KAPPA    1.000000E-12 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    0            
+       XPART    0            
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .45
+

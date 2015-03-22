@@ -1,0 +1,22 @@
+* F:\2-2\matlab assignment\project\ex\figure17\FIGURE17.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Mar 17 01:58:30 2015
+
+
+
+** Analysis setup **
+.DC LIN V_V3 -2 24 4 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "FIGURE17.net"
+.INC "FIGURE17.als"
+
+
+.probe
+
+
+.END

@@ -1,0 +1,190 @@
+
+**** 03/20/15 17:56:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * F:\2-2\matlab assignment\project\ex\figure16\figure16.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Tue Mar 17 01:20:12 2015
+
+
+
+** Analysis setup **
+.DC LIN V_V3 0 210 1 
+.STMLIB "figure16.stl"
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "figure16.net"
+
+**** INCLUDING figure16.net ****
+* Schematics Netlist *
+
+
+
+D_D1         $N_0001 0 D1N4148 
+I_I1         0 $N_0001 DC 2.68  
+R_R21         $N_0001 $N_0002  1.9  
+M_M3         $N_0004 $N_0003 $N_0002 $N_0002 IRF9140
+R_Ra         $N_0005 $N_0002  28k  
+R_Rb         0 $N_0005  10k  
+R_R11         0 $N_0001  45  
+X_U2         $N_0006 $N_0005 $N_0007 $N_0008 $N_0003 uA741
+V_V3         $N_0006 0  AC 10
++PULSE 0 32.9 0 
+R_Rsense         0 $N_0004  1  
+V_V2         $N_0007 0 12V
+V_V1         0 $N_0008 12V
+
+**** RESUMING figure16.cir ****
+.INC "figure16.als"
+
+
+
+**** INCLUDING figure16.als ****
+* Schematics Aliases *
+
+.ALIASES
+D_D1            D1(1=$N_0001 2=0 )
+I_I1            I1(+=0 -=$N_0001 )
+R_R21           R21(1=$N_0001 2=$N_0002 )
+M_M3            M3(d=$N_0004 g=$N_0003 s=$N_0002 s=$N_0002 )
+R_Ra            Ra(1=$N_0005 2=$N_0002 )
+R_Rb            Rb(1=0 2=$N_0005 )
+R_R11           R11(1=0 2=$N_0001 )
+X_U2            U2(+=$N_0006 -=$N_0005 V+=$N_0007 V-=$N_0008 OUT=$N_0003 )
+V_V3            V3(+=$N_0006 -=0 )
+R_Rsense          Rsense(1=0 2=$N_0004 )
+V_V2            V2(+=$N_0007 -=0 )
+V_V1            V1(+=0 -=$N_0008 )
+.ENDALIASES
+
+
+**** RESUMING figure16.cir ****
+.probe
+
+
+.END
+
+**** 03/20/15 17:56:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * F:\2-2\matlab assignment\project\ex\figure16\figure16.sch
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4148         X_U2.dx         
+          IS    2.682000E-09  800.000000E-18 
+           N    1.836                        
+         ISR    1.565000E-09                 
+         IKF     .04417                      
+          BV  100                            
+         IBV  100.000000E-06                 
+          RS     .5664          1            
+          TT   11.540000E-09                 
+         CJO    4.000000E-12                 
+          VJ     .5                          
+           M     .3333                       
+
+
+**** 03/20/15 17:56:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * F:\2-2\matlab assignment\project\ex\figure16\figure16.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U2.qx         
+               NPN             
+          IS  800.000000E-18 
+          BF   93.75         
+          NF    1            
+          BR    1            
+          NR    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 03/20/15 17:56:25 *********** Evaluation PSpice (Nov 1999) **************
+
+ * F:\2-2\matlab assignment\project\ex\figure16\figure16.sch
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IRF9140         
+               PMOS            
+       LEVEL    3            
+           L    2.000000E-06 
+           W    1.9          
+         VTO   -3.67         
+          KP   10.150000E-06 
+       GAMMA    0            
+         PHI     .6          
+      LAMBDA    0            
+          RD     .06066      
+          RS     .0706       
+          RG     .811        
+         RDS  444.400000E+03 
+          IS   52.230000E-18 
+          JS    0            
+           N    2            
+          PB     .8          
+        PBSW     .8          
+         CBD    2.141000E-09 
+          CJ    0            
+        CJSW    0            
+          TT  140.000000E-09 
+        CGSO  877.200000E-12 
+        CGDO  369.300000E-12 
+        CGBO    0            
+         TOX  100.000000E-09 
+          XJ    0            
+          UO  300            
+       UCRIT   10.000000E+03 
+       DELTA    0            
+         ETA    0            
+       KAPPA    1.000000E-12 
+      DIOMOD    1            
+         VFB    0            
+        LETA    0            
+        WETA    0            
+          U0    0            
+        TEMP    0            
+         VDD    0            
+       XPART    0            
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .03
+

@@ -1,0 +1,23 @@
+* F:\2-2\matlab assignment\project\ex\figure11.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Mon Mar 16 23:36:19 2015
+
+
+
+** Analysis setup **
+.DC LIN I_I4 0 210 .1 
+.STMLIB "figure11.stl"
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "figure11.net"
+.INC "figure11.als"
+
+
+.probe
+
+
+.END
