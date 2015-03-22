@@ -26,7 +26,7 @@ io = ion*((tn/t)^3)*exp(((q*eg/(a*k))*((1/tn)-(1/t))));
 
 Ipvn = iscn;
 Ipv = (Ipvn + ki*(t-tn)) * (g/gn);
-vt= ns * (k*t / q);
+vt = ns * (k*t / q);
 
 I = zeros(330,1);
 
@@ -48,6 +48,7 @@ end
 v1(i) = v1(i-1);
 p(i) = p(i-1);
 v1 = transpose(v1);
+
 subplot(2,1,1)
 plot(v1,I);
 
