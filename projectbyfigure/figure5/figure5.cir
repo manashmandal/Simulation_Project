@@ -1,0 +1,56 @@
+netist
+
+
+.MODEL dname D (is=9e-12)
+
+.subckt cell 300 302 
+Iph 300 301 2.55
+DM 301 300 dname
+Rsh 301 300 145.62
+Rse 301 302 0.0156
+.ends cell
+
+xc1 0 1 cell
+xc2 1 2 cell
+xc3 2 3 cell
+xc4 3 4 cell
+xc5 4 5 cell
+xc6 5 6 cell
+xc7 6 7 cell
+xc8 7 8 cell
+xc9 8 9 cell
+xc10 9 10 cell
+xc11 10 11 cell
+xc12 11 12 cell
+xc13 12 13 cell
+xc14 13 14 cell
+xc15 14 15 cell 
+xc16 15 16 cell
+xc17 16 17 cell
+xc18 17 18 cell
+xc19 18 19 cell
+xc20 19 20 cell
+xc21 20 21 cell
+xc22 21 22 cell
+xc23 22 23 cell
+xc24 23 24 cell
+xc25 24 25 cell
+xc26 25 26 cell
+xc27 26 27 cell
+xc28 27 28 cell
+xc29 28 29 cell
+xc30 29 30 cell
+*xc31 30 31 cell
+*xc32 31 32 cell
+*xc33 32 33 cell
+*xc34 33 34 cell
+*xc35 34 35 cell
+*xc36 35 36 cell
+
+
+Vbias 30 0 0v
+
+
+.dc Vbias 0 23 0.01
+.probe
+.end

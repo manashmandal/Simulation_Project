@@ -1,0 +1,53 @@
+netist
+
+.MODEL dname D (is=1e-11)
+
+.subckt s_cell 300 302 
+Iph 300 301 2.55
+DM 301 300 dname
+Rse 301 302 0.009
+.ends s_cell
+
+xc1 0 1 s_cell
+xc2 1 2 s_cell
+xc3 2 3 s_cell
+xc4 3 4 s_cell
+xc5 4 5 s_cell
+xc6 5 6 s_cell
+xc7 6 7 s_cell
+xc8 7 8 s_cell
+xc9 8 9 s_cell
+xc10 9 10 s_cell
+xc11 10 11 s_cell
+xc12 11 12 s_cell
+xc13 12 13 s_cell
+xc14 13 14 s_cell
+xc15 14 15 s_cell 
+xc16 15 16 s_cell
+xc17 16 17 s_cell
+xc18 17 18 s_cell
+xc19 18 19 s_cell
+xc20 19 20 s_cell
+xc21 20 21 s_cell
+xc22 21 22 s_cell
+xc23 22 23 s_cell
+xc24 23 24 s_cell
+xc25 24 25 s_cell
+xc26 25 26 s_cell
+xc27 26 27 s_cell
+xc28 27 28 s_cell
+xc29 28 29 s_cell
+xc30 29 30 s_cell
+*xc31 30 31 s_cell
+*xc32 31 32 s_cell
+*xc33 32 33 s_cell
+*xc34 33 34 s_cell
+*xc35 34 35 s_cell
+*xc36 35 36 s_cell
+*limitation of 64 nodes
+
+Vbias 30 0 0v
+
+.dc Vbias 0 22 0.01
+.probe
+.end
